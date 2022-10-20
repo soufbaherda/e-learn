@@ -1,0 +1,69 @@
+[
+    {
+        "university": "Technische UniversitÃ¤t MÃ¼nchen",
+        "logo": "https://tethys.pnnl.gov/sites/default/files/styles/captioned_400xauto/public/taxonomy-images/Tum_logo.gif?itok=zRJ4zl6y"
+      },
+    {
+      "university": "Boston university",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Boston_University_seal.svg/1200px-Boston_University_seal.svg.png"
+    },
+    {
+        "university": "National Research Nuclear university",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/a/a4/MEPhI_Logo2014_en.png"
+      },
+    {
+      "university": "The university of Michigan",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Seal_of_the_University_of_Michigan.svg/1200px-Seal_of_the_University_of_Michigan.svg.png"
+    },
+    {
+      "university": "Harvard university",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Harvard_shield_wreath.svg/1200px-Harvard_shield_wreath.svg.png"
+    },
+    {
+      "university": "Massachusetts Institute of Technology",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/44/MIT_Seal.svg/1200px-MIT_Seal.svg.png"
+    },
+    {
+      "university": "university of California  Berkeley",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png"
+    },
+    {
+      "university": "university of Adelaide",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/University-of-Adelaide-Logo.svg/1200px-University-of-Adelaide-Logo.svg.png"
+    },
+    {
+      "university": "The university of Queensland",
+      "logo": "https://www.spotteron.net/images/partners/Partner_Logos_512x250/UniversityQueensland.png"
+    },
+    {
+      "university": "Curtin university",
+      "logo": "https://usercontent.one/wp/studyoptions.com/wp-content/uploads/2021/09/Curtin-Uni-logo-profile.jpg"
+    },
+    {
+        "university": "university of Hong Kong",
+        "logo": "https://download.logo.wine/logo/University_of_Hong_Kong/University_of_Hong_Kong-Logo.wine.png"
+    },
+    
+    {
+        "university": "Ecole Mohammadia D'Ingénieurs ",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjUe18ouQ4LZedqaNlun81DnU0lL-5fnLNMTFv1m1honcC2bRPu9EtvE-zlud0UoVduww&usqp=CAU"
+    },
+    {
+        "university": "edX",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSWmKOmdHQ0PskLUVA_K33i6QcRLeiUnjdhZNCwduJH17kNz1sdTxFhCuG0PKPsmm17Es&usqp=CAU"
+    },
+    {
+      "university": "SDG Academy",
+      "logo": "https://creativecommons.org/wp-content/uploads/2021/06/SDG_academy_logo-blue.png"
+    },
+    
+    {
+      "university": "IBM",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png"
+    },
+    {
+      "university": "Wageningen university & Research",
+      "logo": "https://seekvectorlogo.com/wp-content/uploads/2020/01/wageningen-university-and-research-wur-vector-logo.png"
+    }
+    
+  ]

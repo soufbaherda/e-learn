@@ -1,0 +1,38 @@
+.cont{
+    display: grid;
+    margin-top: 10%;
+   
+    grid-template-columns: auto auto auto;
+    
+    padding: 10px;
+}
+
+h1{
+    font-size: xx-large;
+    font-family: 'Roboto';
+
+}
+.cont-story{
+
+    padding: 20px;
+    text-align: center;
+}
+.line {
+    width: 100px;
+    height: 5px;
+    background-color: blue;
+    margin: 20px auto  ;
+}
+.cont-image{
+    position: block;
+    width: 100vh;
+}
+p{
+    text-align: left;
+}
+
+.cont-partners{
+    display: grid;
+    grid-template-columns: repeat(8,minmax(0,2fr));
+    padding: 10px
+}

@@ -1,0 +1,29 @@
+.image-cont{
+    display: block;
+    width: 100%;
+}
+Swiper{
+    background-color:  "#EEEFF3";
+}
+.body-cont{
+    text-align: right;
+}
+.card-cont{
+
+    max-width: max-content;
+    height: 1fr;
+
+}
+.about{
+    text-align: left;
+    display: "flex";
+    overflow: hidden;
+
+
+}
+.line {
+    text-align: center;
+    width: 100px;
+    height: 5px;
+    background-color: black;
+    margin: 20px auto;}

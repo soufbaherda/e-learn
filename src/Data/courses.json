@@ -1,0 +1,46 @@
+[ {
+  "Name": "How to Learn Online",
+  "University": "edX",
+  "Image" : "https://th.bing.com/th/id/OIP.OJ0U3dXpFYjcPRSW58aM0QHaEo?pid=ImgDet&rs=1",
+  "Difficulty Level": "Beginner",
+  "Link": "https://www.edx.org/course/how-to-learn-online",
+  "About": "Learn essential strategies for successful online learning",
+  "Course Description": "Designed for those who are new to elearning, this course will prepare you with strategies to be a successful online learner.The edX learning design team has curated some of the most powerful, science-backed techniques which you can start using right away and on any learning platform.The Verified Certificate for this course is free. Use the following coupon code before September 1, 2020 to upgrade at no cost to you: Y5ZADM5NU2AN5JU7This course will help you answer the following questions: Education & Teacher Training"
+},
+{
+  "Name": "Programming for Everybody (Getting Started with Python)",
+  "University": "The University of Michigan",
+  "Image":"https://th.bing.com/th/id/OIP.Acz2aMKGEqOmywuX8lFO8AHaEa?pid=ImgDet&rs=1",
+  "Difficulty Level": "Beginner",
+  "Link": "https://www.edx.org/course/programming-for-everybody-getting-started-with-pyt",
+  "About": "This course is a \"no prerequisite\" introduction to Python Programming. You will learn about variables, conditional execution, repeated execution and how we use functions. The homework is done in a web browser so you can do all of the programming assignments on a phone or public computer.",
+  "Course Description": "This course aims to teach everyone the basics of programming computers using Python. We cover the basics of how one constructs a program from a series of simple instructions in Python. The course has no pre-requisites and avoids all but the simplest mathematics. Anyone with moderate computer experience should be able to master the materials in this course. This course will cover Chapters 1-5 of the textbook \"Python for Everybody\". Once a student completes this course, they will be ready to take more advanced programming courses. This course covers Python 3. Computer Science"
+},
+{
+  "Name": "CS50's Introduction to Computer Science",
+  "University": "Harvard University",
+  "Image":"https://th.bing.com/th/id/OIP.a1kZo7BmheLYVKXVtvY_xQHaEK?pid=ImgDet&rs=1",
+  "Difficulty Level": "Beginner",
+  "Link": "https://www.edx.org/course/cs50s-introduction-to-computer-science",
+  "About": "An introduction to the intellectual enterprises of computer science and the art of programming.",
+  "Course Description": "This is CS50x , Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. The on-campus version of CS50x , CS50, is Harvard's largest course. Students who earn a satisfactory score on 9 problem sets (i.e., programming assignments) and a final project are eligible for a certificate. This is a self-paced course–you may take CS50x on your own schedule.HarvardX requires individuals who enroll in its courses on edX to abide by the terms of the edX honor code. HarvardX will take appropriate corrective action in response to violations of the edX honor code, which may include dismissal from the HarvardX course; revocation of any certificates received for the HarvardX course; or other remedies as circumstances warrant. No refunds will be issued in the case of corrective action for such violations. Enrollees who are taking HarvardX courses as part of another program will also be governed by the academic policies of those programs.HarvardX pursues the science of learning. By registering as an online learner in an HX course, you will also participate in research about learning. Read our research statement to learn more.Harvard University and HarvardX are committed to maintaining a safe and healthy educational and work environment in which no member of the community is excluded from participation in, denied the benefits of, or subjected to discrimination or harassment in our program. All members of the HarvardX community are expected to abide by Harvard policies on nondiscrimination, including sexual harassment, and the edX Terms of Service. If you have any questions or concerns, please contact harvardx@harvard.edu and/or report your experience through the edX contact form. Computer Science"
+},
+{
+  "Name": "The Analytics Edge",
+  "University": "Massachusetts Institute of Technology",
+  "Image":"https://th.bing.com/th/id/OIP.b_mVSu9xFf7pXnU6WCicUAHaE3?pid=ImgDet&rs=1",
+  "Difficulty Level": "Intermediate",
+  "Link": "https://www.edx.org/course/the-analytics-edge",
+  "About": "Through inspiring examples and stories, discover the power of data and use analytics to provide an edge to your career and your life.",
+  "Course Description": "In the last decade, the amount of data available to organizations has reached unprecedented levels. Data is transforming business, social interactions, and the future of our society. In this course, you will learn how to use data and analytics to give an edge to your career and your life. We will examine real world examples of how analytics have been used to significantly improve a business or industry. These examples include Moneyball, eHarmony, the Framingham Heart Study, Twitter, IBM Watson, and Netflix. Through these examples and many more, we will teach you the following analytics methods: linear regression, logistic regression, trees, text analytics, clustering, visualization, and optimization. We will be using the statistical software R to build models and work with data. The contents of this course are essentially the same as those of the corresponding MIT class (The Analytics Edge). It is a challenging class, but it will enable you to apply analytics to real-world applications.The class will consist of lecture videos, which are broken into small pieces, usually between 4 and 8 minutes each. After each lecture piece, we will ask you a \"quick question\" to assess your understanding of the material. There will also be a recitation, in which one of the teaching assistants will go over the methods introduced with a new example and data set. Each week will have a homework assignment that involves working in R or LibreOffice with various data sets. (R is a free statistical and computing software environment we'll use in the course. See the Software FAQ below for more info). At the end of the class there will be a final exam, which will be similar to the homework assignments. Data Analysis & Statistics"
+},
+{
+  "Name": "Marketing Analytics: Marketing Measurement Strategy",
+  "University": "University of California, Berkeley",
+  "Image":"https://th.bing.com/th/id/R.cd945cfb1b7418026451115f76f26ccc?rik=g5yDWh3ZMcmZkw&pid=ImgRaw&r=0",
+  "Difficulty Level": "Beginner",
+  "Link": "https://www.edx.org/course/marketing-analytics-marketing-measurement-strategy",
+  "About": "This course is part of a MicroMasters® Program",
+  "Course Description": "Begin your journey in a new career in marketing analytics. Learn about powerful strategies and methodology, starting with identifying market trends and metrics used to measure marketing success.In this marketing course, you will learn how to execute market sizing, identify market trends, and predict future conditions.This course is taught by Stephan Sorger who has held leadership roles in marketing and product development at companies such as Oracle, 3Com and NASA. He has also taught for over a decade at UC Berkeley Extension and is the author of two widely adopted marketing textbooks. This course will equip you with the knowledge and skills necessary to immediately see practical benefits in the workplace.Analytics-based marketing is increasingly important in determining a company’s spending and ROI. Many entry-level positions in marketing now require some basic level of knowledge in this rapidly growing field. Computer Science"
+}
+]
