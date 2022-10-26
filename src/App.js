@@ -6,10 +6,11 @@ import Courses from './components/Courses'
 import React from 'react';
 import AboutUs from "./components/AboutUs";
 import SignUp from "./components/SignUp";
-
+import logIn from "./components/LogIn"
 export default function App() {
   return (
     <div>
+      
       <BrowserRouter>
         <Navbar />
         <Switch>
@@ -17,6 +18,7 @@ export default function App() {
             <Route exact  path="/Courses" component={Courses} />
             <Route exact path="/About" component={AboutUs} />
             <Route exact path="/SignUp" component={SignUp} />
+            <Route exact path="/LogIn" component={logIn} />
         </Switch>
       </BrowserRouter>
     </div>

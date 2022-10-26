@@ -16,7 +16,7 @@ const SignUp = () => {
                 <div className={styles[`cont-item`]}>
                     <div className={styles[`text-cont`]}>
                         <h2>
-                            Sign Up
+                            Log In 
                         </h2>
                         <p className={styles[`text1`]}>Welcome Back.<p className={styles[`text1`]}>Please Enter Your Details</p></p>
                         <form>
@@ -24,14 +24,13 @@ const SignUp = () => {
                             <input type="email" />
                             <p>Password :</p>
                             <input type="password" />
-                            <p>Confirm password :</p>
-                            <input type="password" />
+                            
 
                         </form>
                         <button className={styles[`btn`]}> Sign Up </button>
                         <div className={styles[`logIn`]}>
-                            <p className={styles[`text1`]}>Do you have an account?</p>
-                            <a href='/LogIn'>Log In</a>
+                            <p className={styles[`text1`]}>Don't you have an account?</p>
+                            <a href='/SignUp'>Sign Up </a>
                         </div>
                     </div>
                 </div>

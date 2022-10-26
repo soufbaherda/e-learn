@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './about.module.css';
-import image from './images/home.png';
+import image from './images/story.jpg';
 import data from "../Data/University.json"
 const AboutUs = () => {
     return (
@@ -14,8 +14,7 @@ const AboutUs = () => {
                     </h1>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur placeat quod odit a est, fugit maxime dolorem quae voluptatibus soluta, iste cumque commodi. Necessitatibus odit atque nisi aliquid porro, minima corporis ipsam numquam eaque explicabo, sunt possimus vitae officia veritatis maxime, corrupti quaerat libero ab.
-                    </p>
+                        E-learn was founded by Baherda Soufiane and Slimani Achraf in 2019 with a vision of providing life-transforming learning experiences to learners around the world. Today, E-Learn is a global online learning platform that offers anyone, anywhere, access to online courses and degrees from leading universities and companies. E-Learn received B Corp certification in February 2021, which means that we have a legal duty not only to our shareholders, but to also make a positive impact on society more broadly, as we continue our efforts to reduce barriers to world-class education for all.                    </p>
                 </div>
                 <div className={styles[`cont-story`]}>
                     <div className={styles[`cont-image`]}>
@@ -33,13 +32,20 @@ const AboutUs = () => {
                 {data.map(item => {
                     return (
                         <div style={styles[`category `]} key={item[`univesity`]} >
-                                <div className={styles[`cont-story`]}>
-                                    <img style = {{height: "30%"}}src={item[`logo`]} alt="Card image cap" />
-                                </div>
+                            <div className={styles[`cont-story`]}>
+                                <img style={{ height: "30%" }} src={item[`logo`]} alt="Card image cap" />
+                            </div>
                         </div>
                     )
                 })}
             </div>
+            <div className={styles[`cont-story`]}>
+                <h1>
+                    Our Partners:
+                    <div className={styles[`line`]}></div>
+                </h1>
+            </div>
+            
         </div>
     );
 }

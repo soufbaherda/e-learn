@@ -8,7 +8,9 @@ import reportWebVitals from './reportWebVitals';
 import WelcomePage from './components/Welcome';
 import Navigation from './components/Navbar';
 import Footer from './components/Footer';
-import App  from './App';
+import App from './App';
+import { UserContext } from "./components/UserContext";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -16,8 +18,10 @@ root.render(
   <React.StrictMode>
     {/* <Navigation />
     <WelcomePage /> */}
-    <App/>
-    <Footer/>
+    <UserContext.Provider value="etudiant">
+      <App />
+      <Footer />
+    </UserContext.Provider>
   </React.StrictMode>
 );
 
