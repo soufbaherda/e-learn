@@ -16,10 +16,16 @@ Swiper{
 }
 .about{
     text-align: left;
-    display: "flex";
+    white-space: nowrap;
+    width: 300px;
     overflow: hidden;
-
-
+    text-overflow: ellipsis;
+}
+.about:hover{
+        overflow: visible;
+        text-align: left;
+        display: "flex";
+        white-space: normal;
 }
 .line {
     text-align: center;
@@ -27,3 +33,24 @@ Swiper{
     height: 5px;
     background-color: black;
     margin: 20px auto;}
+
+.card-course{
+        width: 90vw;
+        max-width: 1170px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        grid-auto-rows: minmax(100px, auto);
+        margin: 5rem auto;
+        
+}
+
+.course{
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: auto;
+}
+/* .course:hover{
+    transform: scale(1.1, 1.1);
+} */

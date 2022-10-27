@@ -41,6 +41,12 @@
 .itemy:not(:last-child) {
   margin-right: 20px;
 }
+.item:hover{
+  color:blue;
+}
+.item:target{
+  color:blue;
+}
 .logoContainer {
   display: flex;
   justify-content: space-around;

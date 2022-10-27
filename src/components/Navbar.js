@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const context = useContext(UserContext);
   console.log(context)
-  const {Show , SetShow} = useState(true);
+  const [Show, SetShow] = useState(true);
   
   return (
     <div className={navbar.navbar}>
@@ -33,7 +33,7 @@ const Navbar = () => {
           <Link to="/About">
             <li
               className={navbar.item}
-              style={{ color: "blue", marginRight: "-20px", right: "0" }}
+              style={{marginRight: "-20px", right: "0" }}
             >
               About Us
 
