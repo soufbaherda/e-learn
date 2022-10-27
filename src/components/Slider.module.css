@@ -1,79 +1,73 @@
-.image-cont{
-    display: block;
-    width: 100%;
+.image-cont {
+  display: block;
+  width: 100%;
 }
-Swiper{
-    background-color:  "#EEEFF3";
+Swiper {
+  background-color: "#EEEFF3";
 }
-.body-cont{
-    text-align: right;
+.body-cont {
+  text-align: right;
 }
-.card-cont{
-
-    max-width: max-content;
-    height: 1fr;
-
+.card-cont {
+  max-width: max-content;
+  height: 1fr;
 }
-.about{
-    text-align: left;
-    white-space: nowrap;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.about {
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.about:hover{
-        overflow: visible;
-        text-align: left;
-        display: "flex";
-        white-space: normal;
+.about:hover {
+  overflow: visible;
+  text-align: left;
+  display: "flex";
+  white-space: normal;
 }
 .line {
-    text-align: center;
-    width: 100px;
-    height: 5px;
-    background-color: black;
-    margin: 20px auto;}
-    
+  text-align: center;
+  width: 100px;
+  height: 5px;
+  background-color: black;
+  margin: 20px auto;
+}
+
 .cont-story {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
-.page{
-    margin-top: 4%;
-    padding-bottom: 2%;
+.page {
+  margin-top: 4%;
+  padding-bottom: 2%;
 }
-.card-course{
-
-        width: 90vw;
-        max-width: 1170px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 2rem;
-        grid-auto-rows: minmax(100px, auto);
-        margin: 5rem auto;
-        
+.card-course {
+  width: 90vw;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 5rem auto;
 }
 
-.course{
-        border-radius: 1rem;
-        padding: 1rem 2rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        width: auto;
+.course {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: auto;
 }
 /* .course:hover{
     transform: scale(1.1, 1.1);
 } */
 .search {
-    position: relative;
-    margin-top: 5px;
-   
-} 
-.text{
-    position: absolute;
-    width: 35%;
-    top : 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-
-
+  position: relative;
+  margin-top: 5px;
+}
+.text {
+  position: absolute;
+  width: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

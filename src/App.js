@@ -6,7 +6,8 @@ import Courses from './components/Courses'
 import React from 'react';
 import AboutUs from "./components/AboutUs";
 import SignUp from "./components/SignUp";
-import logIn from "./components/LogIn"
+import logIn from "./components/LogIn";
+import Course from "./components/Course"
 export default function App() {
   return (
     <div>
@@ -15,7 +16,8 @@ export default function App() {
         <Navbar />
         <Switch>
             <Route exact path="/" component={WelcomePage}/>
-            <Route exact  path="/Courses" component={Courses} />
+            <Route exact path="/Courses" component={Courses} />
+            <Route exact path="/Course/:id" component={Course}/>
             <Route exact path="/About" component={AboutUs} />
             <Route exact path="/SignUp" component={SignUp} />
             <Route exact path="/LogIn" component={logIn} />

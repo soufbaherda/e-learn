@@ -1,0 +1,32 @@
+.cont-course {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 5rem auto;
+}
+.cont-image {
+  position: relative;
+  padding: 1%;
+  width: 100%;
+  height: 100vh;
+}
+.img1 {
+  position: absolute;
+  width: 35%;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cont-detail {
+  position: relative;
+  padding: 1%;
+}
+
+.btnin {
+  position: absolute;
+  width: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

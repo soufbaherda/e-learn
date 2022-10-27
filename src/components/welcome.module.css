@@ -1,56 +1,48 @@
 .imghome {
-    padding : 10%;
-    width: 100vw;
-    
-    
+  padding: 10%;
+  width: 100vw;
 }
 
 .img-cont {
-    display: flex;
-    height: 90vh;
-    background-color: #EEEFF3;
-    justify-content: center;
+  display: flex;
+  height: 90vh;
+  background-color: #eeeff3;
+  justify-content: center;
 }
 
 img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .title-cont {
-    padding-top: 20%;
-    padding-left: 10%;
-    width: 40%;
-    text-align: center;
-
-
+  padding-top: 20%;
+  padding-left: 10%;
+  width: 40%;
+  text-align: center;
 }
 
-
 h1 {
-    
-    font-family: 'Playfair Display';
-    font-size: 400%;
-    margin-bottom:  50px;
-
+  font-family: "Playfair Display";
+  font-size: 400%;
+  margin-bottom: 50px;
 }
 
 .buttonStart {
-    width: 70%;
-    height: 10%;
-    background: blue;
-    border-radius: 50px;
-    text-align: center;
+  width: 70%;
+  height: 10%;
+  background: blue;
+  border-radius: 50px;
+  text-align: center;
 }
 
 .line {
-    width: 100px;
-    height: 5px;
-    background-color: blue;
-    margin: 20px auto;
+  width: 100px;
+  height: 5px;
+  background-color: blue;
+  margin: 20px auto;
 }
-.sider-cont{
-    text-align: center;
-    background-color: #EEEFF3;
-    
+.sider-cont {
+  text-align: center;
+  background-color: #eeeff3;
 }
