@@ -17,7 +17,7 @@ Swiper{
 .about{
     text-align: left;
     white-space: nowrap;
-    width: 300px;
+    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -33,12 +33,21 @@ Swiper{
     height: 5px;
     background-color: black;
     margin: 20px auto;}
-
+    
+.cont-story {
+    padding: 20px;
+    text-align: center;
+}
+.page{
+    margin-top: 4%;
+    padding-bottom: 2%;
+}
 .card-course{
+
         width: 90vw;
         max-width: 1170px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 2rem;
         grid-auto-rows: minmax(100px, auto);
         margin: 5rem auto;
@@ -54,3 +63,17 @@ Swiper{
 /* .course:hover{
     transform: scale(1.1, 1.1);
 } */
+.search {
+    position: relative;
+    margin-top: 5px;
+   
+} 
+.text{
+    position: absolute;
+    width: 35%;
+    top : 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+
+}
