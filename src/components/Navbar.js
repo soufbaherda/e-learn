@@ -1,8 +1,6 @@
 import React ,{useContext, useState} from "react";
 import navbar from "./navbar.module.css";
 import { IoMdBook } from "react-icons/io";
-import { padding } from "@mui/system";
-import AboutUs from "./AboutUs";
 import { Link } from 'react-router-dom';
 import  { UserContext } from "./UserContext"
 
@@ -29,7 +27,7 @@ const Navbar = () => {
 
         <ul className={navbar.links}>
           <Link to="/Courses"><li className={navbar.item} >Courses</li></Link>
-          {/* <Link>{context!="etudiant"?true:<li className={navbar.item} >Add Course</li>}</Link> */}
+          <Link>{context!="etudiant"?true:<li className={navbar.item} >Add Course</li>}</Link>
           <Link to="/About">
             <li
               className={navbar.item}

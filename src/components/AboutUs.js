@@ -1,14 +1,14 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './about.module.css';
-import image from './images/story.jpg';
+import image from '../images/story.jpg';
 import data from "../Data/University.json"
 import Teachers from './teachers';
 const AboutUs = () => {
     return (
         <div>
             <div className={styles[`cont`]} data-aos="fade-down">
-                <div className={styles[`cont-story`]}>
+                <div className={styles[`cont-story`]} data-aos ="fade-left">
                     <h1>
                         Our Story :
                         <div className={styles[`line`]}></div>

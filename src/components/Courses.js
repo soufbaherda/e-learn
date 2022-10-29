@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Slider.module.css";
-import { SwiperSlide } from "swiper/react";
-import { Grid } from "@mui/material";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
 

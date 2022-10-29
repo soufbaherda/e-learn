@@ -1,8 +1,8 @@
 import styles from "./teachers.module.css";
-import teacher1 from "./images/achraf.jpeg";
-import teacher2 from "./images/yassine.png";
-import teacher3 from "./images/soufiane.png";
-import teacher4 from "./images/khalil.jpg";
+import teacher1 from "../images/achraf.jpeg";
+import teacher2 from "../images/yassine.png";
+import teacher3 from "../images/soufiane.png";
+import teacher4 from "../images/khalil.jpg";
 // import teacher5 from "../../images/teacher5.jpg";
 import { useEffect } from "react";
 import Aos from "aos";

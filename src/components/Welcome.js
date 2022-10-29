@@ -1,9 +1,8 @@
 
 import styles from './welcome.module.css'
-import Home from './images/home.png'
-import { Button, ButtonGroup } from 'react-bootstrap'
+import Home from '../images/home.png'
+import { Button } from 'react-bootstrap'
 import Slider from './Slider'
-import Footer from './Footer'
 export default function WelcomePage() {
     const bool = true
 

@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import styles from './logIn.module.css';
 import Col from "react-bootstrap/Col"
 import Form from "react-bootstrap/Form"
-import image from './images/Community.png'
+import image from '../images/Community.png'
 import { Button } from 'react-bootstrap';
-import Footer from './Footer';
 import { Link } from '@mui/material';
 const LogIn = () => {
     const [validated, setValidated] = useState(false);
@@ -38,7 +37,7 @@ const LogIn = () => {
 
     return (
         <div>
-            <div className={styles[`cont`]}>
+            <div className={styles[`cont`]} >
                 <div className={styles[`cont-item`]}>
                     <div className={styles[`img-cont`]}>
                         <img src={image} className={styles[`img1`]} />

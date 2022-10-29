@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Card } from 'react-bootstrap';
 import styles from './Slider.module.css'
 import 'swiper/css';
 import data from '../Data/courses'

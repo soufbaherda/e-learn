@@ -16,8 +16,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
-    {/* <Navigation />
-    <WelcomePage /> */}
     <UserContext.Provider value="etudiant">
       <App />
       <Footer />

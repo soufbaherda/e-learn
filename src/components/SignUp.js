@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './signUp.module.css';
-import image from './images/Community.png'
+import image from '../images/Community.png'
 import { Button, Form } from 'react-bootstrap';
 import Col from "react-bootstrap/Col";
 import { Link } from 'react-router-dom';
