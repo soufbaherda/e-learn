@@ -5,8 +5,6 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import reportWebVitals from './reportWebVitals';
-import WelcomePage from './components/Welcome';
-import Navigation from './components/Navbar';
 import Footer from './components/Footer';
 import App from './App';
 import { UserContext } from "./components/UserContext";

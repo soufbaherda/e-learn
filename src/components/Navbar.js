@@ -27,7 +27,8 @@ const Navbar = () => {
 
         <ul className={navbar.links}>
           <Link to="/Courses"><li className={navbar.item} >Courses</li></Link>
-          <Link>{context!="etudiant"?true:<li className={navbar.item} >Add Course</li>}</Link>
+          <Link to ="/Add"><li className={navbar.item} >Add Course</li></Link>
+          {/* {context!="etudiant"?true:<Link to ="/AddCourse"><li className={navbar.item} >Add Course</li></Link>} */}
           <Link to="/About">
             <li
               className={navbar.item}

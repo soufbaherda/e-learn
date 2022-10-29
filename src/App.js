@@ -18,7 +18,7 @@ export default function App() {
         <Switch>
             <Route exact path="/" component={WelcomePage}/>
             <Route exact path="/Courses" component={Courses} />
-            <Route exact path="/AddCourses" component={AddCourse} />
+            <Route exact path="/Add" component={AddCourse} />
             <Route exact path="/Course/:id" component={Course}/>
             <Route exact path="/About" component={AboutUs} />
             <Route exact path="/SignUp" component={SignUp} />

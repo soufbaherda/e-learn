@@ -9,7 +9,7 @@ const AboutUs = () => {
         <div>
             <div className={styles[`cont`]} data-aos="fade-down">
                 <div className={styles[`cont-story`]} data-aos ="fade-left">
-                    <h1>
+                    <h1> 
                         Our Story :
                         <div className={styles[`line`]}></div>
                     </h1>
