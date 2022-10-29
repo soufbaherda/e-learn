@@ -3,10 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './about.module.css';
 import image from './images/story.jpg';
 import data from "../Data/University.json"
+import Teachers from './teachers';
 const AboutUs = () => {
     return (
         <div>
-            <div className={styles[`cont`]}>
+            <div className={styles[`cont`]} data-aos="fade-down">
                 <div className={styles[`cont-story`]}>
                     <h1>
                         Our Story :
@@ -28,7 +29,7 @@ const AboutUs = () => {
                     <div className={styles[`line`]}></div>
                 </h1>
             </div>
-            <div className={styles[`cont-partners`]}>
+            <div className={styles[`cont-partners`]} data-aos="fade-down">
                 {data.map(item => {
                     return (
                         <div style={styles[`category `]} key={item[`univesity`]} >
@@ -41,11 +42,11 @@ const AboutUs = () => {
             </div>
             <div className={styles[`cont-story`]}>
                 <h1>
-                    Our Partners:
+                    Our teachers:
                     <div className={styles[`line`]}></div>
                 </h1>
             </div>
-            
+            <Teachers/>
         </div>
     );
 }

@@ -1,9 +1,40 @@
 import React, { useState } from 'react';
-import styles from './signUp.module.css';
+import styles from './logIn.module.css';
+import Col from "react-bootstrap/Col"
+import Form from "react-bootstrap/Form"
 import image from './images/Community.png'
 import { Button } from 'react-bootstrap';
 import Footer from './Footer';
-const SignUp = () => {
+import { Link } from '@mui/material';
+const LogIn = () => {
+    const [validated, setValidated] = useState(false);
+    const [email, setEmail] = useState("");
+    const [id, setid] = useState("");
+    const [password, setPassword] = useState("");
+    const [connexion, setConnexion] = useState({});
+    const [mess, setMess] = useState("false");
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        event.preventDefault();
+        var compte = JSON.stringify({
+            "email": email,
+            "password": password,
+        });
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: compte,
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost:8081/login", requestOptions)
+            .then(response => response.json())
+            .then(data => { setid(data.id) });
+           
+        
+    };
 
     return (
         <div>
@@ -14,30 +45,47 @@ const SignUp = () => {
                     </div>
                 </div>
                 <div className={styles[`cont-item`]}>
-                    <div className={styles[`text-cont`]}>
+                    <div className={styles[`text-cont`]} >
                         <h2>
-                            Log In 
+                            Log In
                         </h2>
                         <p className={styles[`text1`]}>Welcome Back.<p className={styles[`text1`]}>Please Enter Your Details</p></p>
-                        <form>
-                            <p>Email :</p>
-                            <input type="email" />
-                            <p>Password :</p>
-                            <input type="password" />
-                            
 
-                        </form>
-                        <button className={styles[`btn`]}> Sign Up </button>
+                        <Form className="form" noValidate validated={validated} onSubmit={handleSubmit} >
+                            <Form.Group as={Col} md="8" controlId="formBasicEmail" onChange={(e) => setEmail(e.target.value)} >
+                                <p>Email :</p>
+                                <Form.Control
+                                    required
+                                    type="email"
+                                    placeholder="Example@gmail.com"s
+                                />
+                                <Form.Control.Feedback type="invalid">Entrer mail valide.</Form.Control.Feedback>
+                            </Form.Group>
+
+                            <Form.Group as={Col} md="8" controlId="formBasicPassword" onChange={(e) => setPassword(e.target.value)} >
+                                <p>Password :</p>
+                                <Form.Control
+                                    required
+                                    type="password"
+                                    placeholder="password"
+
+                                />
+                                <Form.Control.Feedback type="invalid">Entrer mot de passe valide.</Form.Control.Feedback>
+                            </Form.Group>
+                        </Form>
+                        <Button className={styles[`btn`]} type ="submit" onClick={handleSubmit}> Log In </Button>
                         <div className={styles[`logIn`]}>
                             <p className={styles[`text1`]}>Don't you have an account?</p>
                             <a href='/SignUp'>Sign Up </a>
                         </div>
+                        {console.log({id})}
+                        {id===-1 ?<p className="error">mot de passe ou email incorrect !</p>:<Link to= "/"/>}
                     </div>
                 </div>
             </div>
-            
+
         </div>
     );
 }
 
-export default SignUp;
+export default LogIn;
