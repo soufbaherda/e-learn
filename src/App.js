@@ -1,6 +1,6 @@
+import { useMemo, useState } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import ReactDOM from 'react-dom';
 import WelcomePage from "./components/Welcome";
 import Courses from './components/Courses'
 import React from 'react';
@@ -9,21 +9,28 @@ import SignUp from "./components/SignUp";
 import logIn from "./components/LogIn";
 import Course from "./components/Course"
 import AddCourse from "./components/AddCourse";
+import MyListe from "./components/MyListe";
+import { UserContext } from "./components/UserContext";
 export default function App() {
+  const [user, setUser] = useState(null);
+
+  const value= useMemo(()=>({user, setUser}),[user, setUser]);
   return (
     <div>
-      
       <BrowserRouter>
+      <UserContext.Provider value={value}>
         <Navbar />
         <Switch>
-            <Route exact path="/" component={WelcomePage}/>
+            <Route exact path="/" component={WelcomePage} />
             <Route exact path="/Courses" component={Courses} />
+            <Route exact path="/Myliste" component={MyListe} />
             <Route exact path="/Add" component={AddCourse} />
-            <Route exact path="/Course/:id" component={Course}/>
+            <Route exact path="/Course/:id" component={Course} />
             <Route exact path="/About" component={AboutUs} />
             <Route exact path="/SignUp" component={SignUp} />
             <Route exact path="/LogIn" component={logIn} />
         </Switch>
+        </UserContext.Provider>
       </BrowserRouter>
     </div>
   );

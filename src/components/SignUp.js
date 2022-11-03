@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import styles from './signUp.module.css';
 import image from '../images/Community.png'
 import { Button, Form } from 'react-bootstrap';
@@ -11,8 +12,12 @@ const SignUp = () => {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
+    const [role, setRole] = useState("etudiant");
     const [mailerror, setMailerror] = useState("false");
-
+    const navigate = useHistory();
+    function navigateToHome() {
+        navigate.push("/logIn");
+      }
     const verify = () => {
         var requestOptions = {
             method: "GET",
@@ -20,7 +25,7 @@ const SignUp = () => {
         };
         fetch("http://localhost:8081/verify/" + email, requestOptions)
             .then((response) => response.json())
-            .then((data) => {setMailerror(data.exist);});
+            .then((data) => { setMailerror(data.exist); });
     };
     const handleSubmit = (event) => {
         verify();
@@ -33,6 +38,7 @@ const SignUp = () => {
                 name: name,
                 email: email,
                 password: password,
+                role: role,
             });
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -44,10 +50,12 @@ const SignUp = () => {
             };
 
             fetch("http://localhost:8081/register", requestOptions);
+            navigateToHome();
             setValidated(true);
-    };
-        }
+        };
         
+    }
+
 
 
     return (
@@ -73,7 +81,7 @@ const SignUp = () => {
                                 as={Col}
                                 md="8"
                                 controlId="validationCustom01"
-                                value = {name}
+                                value={name}
                                 onChange={(e) => setName(e.target.value)}>
                                 <p>Full name:</p>
                                 <Form.Control required type="text" placeholder="full name" />
@@ -103,7 +111,7 @@ const SignUp = () => {
                             <Form.Group
                                 as={Col}
                                 md="8"
-                                value ={password}
+                                value={password}
                                 controlId="formBasicPassword"
                                 onChange={(e) => setPassword(e.target.value)}>
                                 <p>Password :</p>
@@ -113,8 +121,11 @@ const SignUp = () => {
                                 </Form.Control.Feedback>
                             </Form.Group>
                         </Form>
-                        <Button className={styles[`btn`]} type="submit" onClick={handleSubmit}> Sign Up </Button>
-                       
+                        <Button className={styles[`btn`]} type="submit" onClick={handleSubmit}>
+                            Sign Up
+                            
+                        </Button>
+
                         <div className={styles[`logIn`]}>
                             <p className={styles[`text1`]}>Do you have an account?</p>
                             <a href='/LogIn'>Log In</a>
