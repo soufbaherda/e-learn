@@ -4,6 +4,7 @@ import styles from "./addCourse.module.css";
 import { Button, Form } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import data from "../Data/University.json";
+import { useHistory } from "react-router-dom";
 const AddCourse = () => {
   const [course, setCourse] = useState({
     university: "",
@@ -13,6 +14,7 @@ const AddCourse = () => {
     difficultyLevel: "",
   });
   const [postId, setPostId] = useState(null);
+  const navigate = useHistory();
 
   const handleChange = (e) => {
     if (e.target.name === "university") {
@@ -49,6 +51,12 @@ const AddCourse = () => {
       .catch((err) => {
         console.debug("Error in fetch", err);
       });
+    if (course.name && course.img) {
+      alert("cours ajouté avec succès");
+      navigate.push("/Courses");
+    } else {
+      alert("Veuillez remplir les champs");
+    }
 
     setCourse({
       university: "",
