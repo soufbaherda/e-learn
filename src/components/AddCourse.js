@@ -7,12 +7,14 @@ import data from "../Data/University.json";
 import { useHistory } from "react-router-dom";
 const AddCourse = () => {
   const [course, setCourse] = useState({
-    university: "",
     name: "",
-    about: "",
-    img: "",
+    university: "",
     difficultyLevel: "",
+    link :"",
+    About: "",
+    img: "",
   });
+  const [validated, setValidated] = useState(false);
   const [postId, setPostId] = useState(null);
   const navigate = useHistory();
 
@@ -32,28 +34,40 @@ const AddCourse = () => {
         ...course,
         [e.target.name]: e.target.value,
       });
+      console.log(course)
     }
 
     console.log(e.target.name);
     console.log(e.target.value);
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(course);
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(course),
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    else {
+      console.log(course);
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: JSON.stringify(course),
+        redirect: "follow",
+      };
+      fetch("http://localhost:8080/cours", requestOptions)
+        .then((response) => response.json())
+        .then((data) => setPostId(data.id))
+        .catch((err) => {
+          console.debug("Error in fetch", err);
+        });
+      setValidated(true);
     };
-    fetch("http://localhost:8080/cours", requestOptions)
-      .then((response) => response.json())
-      .then((data) => setPostId(data.id))
-      .catch((err) => {
-        console.debug("Error in fetch", err);
-      });
     if (course.name && course.img) {
       alert("cours ajouté avec succès");
       navigate.push("/Courses");
+
     } else {
       alert("Veuillez remplir les champs");
     }
@@ -77,7 +91,9 @@ const AddCourse = () => {
         <div className={styles[`cont-img`]}>
           <img src={form} />
         </div>
-        <Form>
+        <Form onSubmit={handleSubmit}
+          noValidate
+          validated={validated}>
           <Form.Group as={Col} md="8" controlId="university">
             <p>University :</p>
             <Form.Select
@@ -86,7 +102,7 @@ const AddCourse = () => {
               onChange={handleChange}
               name="university"
             >
-              <option value="">Choose...</option>
+              {/* <option value= {null}>Choose...</option> */}
               {data.map((item) => {
                 return (
                   <option value={item[`university`]}>
@@ -113,16 +129,18 @@ const AddCourse = () => {
             as={Col}
             md="8"
             controlId="levelDifficulty"
-            //onChange={(e) => setPassword(e.target.value)}
+          //onChange={(e) => setPassword(e.target.value)}
           >
             <p>Level Difficulty :</p>
             <Form.Select
               value={course.difficultyLevel}
               aria-activedescendant="on"
+             
+              
               onChange={handleChange}
               name="difficultyLevel"
             >
-              <option value="">Choose...</option>
+              {/* <option value={null}>Choose...</option> */}
               <option value="Beginner">Beginner</option>
               <option value="Intermediate">Intermediate</option>
               <option value="Advanced">Advanced</option>

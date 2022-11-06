@@ -50,7 +50,7 @@ const SignUp = () => {
             };
 
             fetch("http://localhost:8081/register", requestOptions);
-            navigateToHome();
+           
             setValidated(true);
         };
         
@@ -125,7 +125,7 @@ const SignUp = () => {
                             Sign Up
                             
                         </Button>
-
+                        {mailerror? true : navigateToHome("/logIn")}
                         <div className={styles[`logIn`]}>
                             <p className={styles[`text1`]}>Do you have an account?</p>
                             <a href='/LogIn'>Log In</a>

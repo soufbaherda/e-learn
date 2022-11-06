@@ -1,17 +1,19 @@
 
 import styles from './welcome.module.css'
 import Home from '../images/home.png'
+import {useHistory} from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import Slider from './Slider'
 export default function WelcomePage() {
     const bool = true
-
+    const navigate = useHistory();
     return (
         <div style ={{backgroundColor :"#EEEFF3"}}>
             <div className={styles['img-cont']}>
                 <div className={styles['title-cont']}>
                     <h1>Online Courses</h1>
-                    <Button variant="primary" className={styles['buttonStart']}>Get start</Button>
+                    <Button variant="primary" className={styles['buttonStart']}
+                    onClick ={()=>{navigate.push("/SignUp")}}>Get start</Button>
                     {/* <hr size="10" width="30%" color="blue" className='line'></hr> */}
                     <div className={styles[`line`]}></div>
                 </div>
