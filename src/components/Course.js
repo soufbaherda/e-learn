@@ -59,6 +59,8 @@ export const Course = () => {
         <h5>{book[`name`]}</h5>
         <p>{book[`university`]}</p>
         <p>{book[`about`]}</p>
+        <p>niveau de difficulté : {book[`difficultyLevel`]}</p>
+        <p>date d'échéance : {book[`dateFin`]}</p>
         <Button className={styles[`btnin`]} onClick={handleClick}>
           Get it now
         </Button>

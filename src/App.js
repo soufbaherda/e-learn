@@ -25,7 +25,11 @@ export default function App() {
             <Route exact path="/Courses" component={Courses} />
             <Route exact path="/Myliste" component={MyListe} />
             <Route exact path="/Add" component={AddCourse} />
-            <Route exact path="/Course/:id" component={Course} />
+            <Route
+              exact
+              path="/Course/:id"
+              component={user?.role === "etudiant" ? Course : Courses}
+            />
             <Route exact path="/About" component={AboutUs} />
             <Route exact path="/SignUp" component={SignUp} />
             <Route exact path="/LogIn" component={logIn} />

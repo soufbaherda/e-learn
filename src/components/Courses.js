@@ -1,22 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styles from "./Slider.module.css";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
+import { UserContext } from "./UserContext";
 
 const Courses = () => {
   const [books, setBooks] = useState([]);
   const [inputText, setInputText] = useState("");
   const [data, setData] = useState([]);
+  const [book, setBook] = useState([]);
+  const [dataa, setDataa] = useState([]);
+  const { user, setUser } = useContext(UserContext);
+  let id = user && user.id;
 
   useEffect(() => {
     async function getBooks() {
       const res = await fetch("http://localhost:8080/cours");
       const data = await res.json();
       setBooks(data);
+      console.log(data);
       setData(data);
     }
 
     getBooks();
+  }, []);
+
+  useEffect(() => {
+    async function getBook() {
+      const res = await fetch(`http://localhost:8081/${id}`);
+      const data = await res.json();
+      setBook(data.courses);
+      console.log(data.courses);
+      setDataa(data.courses);
+    }
+    getBook();
   }, []);
 
   // useEffect(() => {
@@ -43,6 +60,22 @@ const Courses = () => {
     // console.log(data);
   }, [inputText]);
 
+  function minus(firstList, secondList) {
+    const thirdList = [];
+    for (let b of firstList) {
+      let v = false;
+      for (let bk of secondList) {
+        if (bk.id == b.id) {
+          v = true;
+        }
+      }
+      if (!v) {
+        thirdList.push(b);
+      }
+    }
+    return thirdList;
+  }
+
   return (
     <div className={styles[`page`]}>
       <div className={styles[`cont-story`]}>
@@ -60,7 +93,7 @@ const Courses = () => {
         />
       </div>
       <div className={styles[`card-course`]}>
-        {data.map((item) => {
+        {(dataa ? minus(data, dataa) : data).map((item) => {
           return (
             <>
               <div className="card" style={{ height: "500px" }}>

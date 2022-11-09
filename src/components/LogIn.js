@@ -12,6 +12,7 @@ const LogIn = () => {
   const [email, setEmail] = useState("");
   const [id, setid] = useState(0);
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const { user, setUser } = useContext(UserContext);
 
   //link to home
@@ -42,7 +43,8 @@ const LogIn = () => {
         setUser(data);
         //navigate.push("/");
       });
-    if (id !== 0 && id !== 0) {
+
+    if (id !== 0 && id !== -1) {
       navigate.push("/");
     }
   };
