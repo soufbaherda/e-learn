@@ -12,7 +12,12 @@ import AddCourse from "./components/AddCourse";
 import MyListe from "./components/MyListe";
 import { UserContext } from "./components/UserContext";
 import CourseInscrit from "./components/CourseInscrit";
+<<<<<<< HEAD
 import Profil from "./components/Profil";
+=======
+import CourseAjoute from "./components/CourseAjoute";
+import CourseEdit from "./components/CourseEdit";
+>>>>>>> 89d961c03f5d9c504e91e1f310e5c140b2e049d8
 export default function App() {
   const [user, setUser] = useState(null);
 
@@ -32,10 +37,16 @@ export default function App() {
               path="/Course/:id"
               component={user?.role === "etudiant" ? Course : Courses}
             />
+            <Route exact path="/Course/Edit/:id" component={CourseAjoute} />
             <Route
               exact
               path="/Course/:id/inscription"
               component={CourseInscrit}
+            />
+            <Route
+              exact
+              path="/Course/Edit/:id/modifier"
+              component={CourseEdit}
             />
             <Route exact path="/About" component={AboutUs} />
             <Route exact path="/SignUp" component={SignUp} />

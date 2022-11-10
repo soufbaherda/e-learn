@@ -69,7 +69,11 @@ const MyListe = () => {
             <>
               <div className="card" style={{ height: "500px" }}>
                 <Link
-                  to={`/Course/${item.id}/inscription`}
+                  to={
+                    user?.role == "etudiant"
+                      ? `/Course/${item.id}/inscription`
+                      : `/Course/Edit/${item.id}`
+                  }
                   style={{ textDecoration: "none" }}
                 >
                   <img
