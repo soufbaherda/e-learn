@@ -46,6 +46,7 @@ const SignUp = () => {
                 method: "POST",
                 headers: myHeaders,
                 body: compte,
+                mode: 'no-cors',
                 redirect: "follow",
             };
 
