@@ -33,7 +33,8 @@ export const Course = () => {
     console.log(id);
     console.log(id_etd);
     const requestOptions = {
-      method: "POST",
+      method: "GET",
+      mode: 'no-cors',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         id: id_etd,
