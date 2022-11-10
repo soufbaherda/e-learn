@@ -1,21 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import form from "../images/Checklist.jpg";
 import styles from "./addCourse.module.css";
 import { Button, Form } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import data from "../Data/University.json";
 import { useHistory } from "react-router-dom";
+import { UserContext } from "./UserContext";
+
 const AddCourse = () => {
+  const { user, setUser } = useContext(UserContext);
+  let id = user && user[`id`];
   const [course, setCourse] = useState({
     name: "",
     university: "",
     difficultyLevel: "",
-    link :"",
+    link: "",
     About: "",
     img: "",
+    dataFin: "",
   });
   const [validated, setValidated] = useState(false);
-  const [postId, setPostId] = useState(null);
+  const [postId, setPostId] = useState(0);
   const navigate = useHistory();
 
   const handleChange = (e) => {
@@ -34,7 +39,7 @@ const AddCourse = () => {
         ...course,
         [e.target.name]: e.target.value,
       });
-      console.log(course)
+      console.log(course);
     }
 
     console.log(e.target.name);
@@ -45,8 +50,7 @@ const AddCourse = () => {
     if (form.checkValidity() === false) {
       e.preventDefault();
       e.stopPropagation();
-    }
-    else {
+    } else {
       console.log(course);
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
@@ -58,16 +62,41 @@ const AddCourse = () => {
       };
       fetch("http://localhost:8080/cours", requestOptions)
         .then((response) => response.json())
-        .then((data) => setPostId(data.id))
+        .then((data) => {
+          const requestOptionss = {
+            method: "POST",
+            headers: myHeaders,
+            body: JSON.stringify({ id: id, idCourses: data }),
+            redirect: "follow",
+          };
+          fetch(`http://localhost:8081/${id}`, requestOptionss)
+            .then((response) => response.json())
+            .catch((err) => {
+              console.debug("Error in fetch", err);
+            });
+        })
         .catch((err) => {
           console.debug("Error in fetch", err);
         });
+      console.log(postId);
+      // const requestOptionss = {
+      //   method: "POST",
+      //   headers: myHeaders,
+      //   body: JSON.stringify({ id: id, idCourses: postId }),
+      //   redirect: "follow",
+      // };
+      // fetch(`http://localhost:8081/${id}`, requestOptionss)
+      //   .then((response) => response.json())
+      //   .then((data) => setPostId(data.id))
+      //   .catch((err) => {
+      //     console.debug("Error in fetch", err);
+      //   });
+
       setValidated(true);
-    };
+    }
     if (course.name && course.img) {
       alert("cours ajouté avec succès");
       navigate.push("/Courses");
-
     } else {
       alert("Veuillez remplir les champs");
     }
@@ -91,9 +120,7 @@ const AddCourse = () => {
         <div className={styles[`cont-img`]}>
           <img src={form} />
         </div>
-        <Form onSubmit={handleSubmit}
-          noValidate
-          validated={validated}>
+        <Form onSubmit={handleSubmit} noValidate validated={validated}>
           <Form.Group as={Col} md="8" controlId="university">
             <p>University :</p>
             <Form.Select
@@ -129,14 +156,12 @@ const AddCourse = () => {
             as={Col}
             md="8"
             controlId="levelDifficulty"
-          //onChange={(e) => setPassword(e.target.value)}
+            //onChange={(e) => setPassword(e.target.value)}
           >
             <p>Level Difficulty :</p>
             <Form.Select
               value={course.difficultyLevel}
               aria-activedescendant="on"
-             
-              
               onChange={handleChange}
               name="difficultyLevel"
             >
@@ -159,6 +184,21 @@ const AddCourse = () => {
             />
             <Form.Control.Feedback type="invalid">
               description invalid.
+            </Form.Control.Feedback>
+            {/* {console.log(description)} */}
+          </Form.Group>
+          <Form.Group as={Col} md="8" controlId="details">
+            <p>Description :</p>
+            <Form.Control
+              required
+              type="date"
+              placeholder="Date d'échéance"
+              onChange={handleChange}
+              name="dateFin"
+              value={course.date}
+            />
+            <Form.Control.Feedback type="invalid">
+              date invalid.
             </Form.Control.Feedback>
             {/* {console.log(description)} */}
           </Form.Group>

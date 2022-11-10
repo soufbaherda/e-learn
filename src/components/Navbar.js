@@ -38,9 +38,14 @@ const Navbar = () => {
             true
           )}
           {role === "enseignant" ? (
-            <Link to="/Add">
-              <li className={navbar.item}>Add Course</li>
-            </Link>
+            <>
+              <Link to="/MyListe">
+                <li className={navbar.item}>My liste</li>
+              </Link>
+              <Link to="/Add">
+                <li className={navbar.item}>Add Course</li>
+              </Link>
+            </>
           ) : (
             true
           )}

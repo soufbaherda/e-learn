@@ -5,7 +5,7 @@ import { useParams, useHistory } from "react-router-dom";
 import styles from "./course.module.css";
 import { UserContext } from "./UserContext";
 
-export const Course = () => {
+export const CourseInscrit = () => {
   const { id } = useParams();
   const [book, setBook] = useState([]);
   const [postId, setPostId] = useState(null);
@@ -13,6 +13,7 @@ export const Course = () => {
   const navigate = useHistory();
   let id_etd = user && user[`id`];
   const url = `http://localhost:8080/cours/${id}`;
+
   console.log(url);
 
   async function getBook() {
@@ -32,23 +33,9 @@ export const Course = () => {
     e.preventDefault();
     console.log(id);
     console.log(id_etd);
-    const requestOptions = {
-      method: "GET",
-      mode: 'no-cors',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: id_etd,
-        idCourses: id,
-      }),
-    };
-
-    fetch(`http://localhost:8081/${id_etd}`, requestOptions)
-      .then((response) => response.json())
-      .then((data) => setPostId(data.id))
-      .catch((err) => {
-        console.debug("Error in fetch", err);
-      });
-    alert("Inscription avec succes ");
+    fetch(`http://localhost:8081/user/course/${id_etd}/${id}`, {
+      method: "DELETE",
+    });
     navigate.push("/Myliste");
   };
   return (
@@ -63,11 +50,11 @@ export const Course = () => {
         <p>niveau de difficulté : {book[`difficultyLevel`]}</p>
         <p>date d'échéance : {book[`dateFin`]}</p>
         <Button className={styles[`btnin`]} onClick={handleClick}>
-          Get it now
+          Delete
         </Button>
       </div>
     </div>
   );
 };
 
-export default Course;
+export default CourseInscrit;
