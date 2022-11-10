@@ -40,7 +40,7 @@ const SignUp = () => {
                 password: password,
                 role: role,
             });
-            var myHeaders = new Headers();
+            var myHeaders = new Headers(); 
             myHeaders.append("Content-Type", "application/json");
             var requestOptions = {
                 method: "POST",

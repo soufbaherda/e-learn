@@ -12,6 +12,7 @@ import AddCourse from "./components/AddCourse";
 import MyListe from "./components/MyListe";
 import { UserContext } from "./components/UserContext";
 import CourseInscrit from "./components/CourseInscrit";
+import Profil from "./components/Profil";
 export default function App() {
   const [user, setUser] = useState(null);
 
@@ -38,6 +39,7 @@ export default function App() {
             />
             <Route exact path="/About" component={AboutUs} />
             <Route exact path="/SignUp" component={SignUp} />
+            <Route exact path="/Profil" component={Profil} />
             <Route exact path="/LogIn" component={logIn} />
           </Switch>
         </UserContext.Provider>
