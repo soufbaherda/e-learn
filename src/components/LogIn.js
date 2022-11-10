@@ -42,11 +42,10 @@ const LogIn = () => {
         setid(data.id);
         setUser(data);
         //navigate.push("/");
+        if (data.id !== 0 && data.id !== -1) {
+          navigate.push("/");
+        }
       });
-
-    if (id !== 0 && id !== -1) {
-      navigate.push("/");
-    }
   };
 
   return (

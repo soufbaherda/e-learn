@@ -33,10 +33,8 @@ export const CourseAjoute = () => {
     e.preventDefault();
     console.log(id);
     console.log(id_etd);
-    fetch(`http://localhost:8081/user/course/${id_etd}/${id}`, {
-      method: "DELETE",
-    });
-    navigate.push("/Myliste");
+
+    navigate.push(`/Course/Edit/${id}/modifier`);
   };
   return (
     <div className={styles[`cont-course`]}>
@@ -50,7 +48,7 @@ export const CourseAjoute = () => {
         <p>niveau de difficulté : {book[`difficultyLevel`]}</p>
         <p>date d'échéance : {book[`dateFin`]}</p>
         <Button className={styles[`btnin`]} onClick={handleClick}>
-          Delete
+          Edit
         </Button>
       </div>
     </div>
