@@ -11,6 +11,7 @@ import Course from "./components/Course";
 import AddCourse from "./components/AddCourse";
 import MyListe from "./components/MyListe";
 import { UserContext } from "./components/UserContext";
+import CourseInscrit from "./components/CourseInscrit";
 export default function App() {
   const [user, setUser] = useState(null);
 
@@ -29,6 +30,11 @@ export default function App() {
               exact
               path="/Course/:id"
               component={user?.role === "etudiant" ? Course : Courses}
+            />
+            <Route
+              exact
+              path="/Course/:id/inscription"
+              component={CourseInscrit}
             />
             <Route exact path="/About" component={AboutUs} />
             <Route exact path="/SignUp" component={SignUp} />
